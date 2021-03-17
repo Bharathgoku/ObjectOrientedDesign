@@ -6,6 +6,7 @@ import ObjectOrientedDesign.LibraryManagementSystem.entities.BookCheckout;
 import ObjectOrientedDesign.LibraryManagementSystem.entities.BookItem;
 import ObjectOrientedDesign.LibraryManagementSystem.entities.BookReservation;
 import ObjectOrientedDesign.LibraryManagementSystem.entities.Member;
+import ObjectOrientedDesign.LibraryManagementSystem.enums.BookItemStatus;
 import ObjectOrientedDesign.LibraryManagementSystem.enums.LendingStatus;
 import ObjectOrientedDesign.LibraryManagementSystem.enums.ReservationStatus;
 import ObjectOrientedDesign.LibraryManagementSystem.services.interfaces.BookingService;
@@ -46,6 +47,7 @@ public class BookingServiceImpl implements BookingService {
     public BookCheckout checkInBookItem(BookItem bookItem) {
 
         BookCheckout bookCheckout = bookingData.getBookCheckoutByBookItem(bookItem);
+        bookItem.setBookItemStatus(BookItemStatus.AVAILABLE);
         bookCheckout.setLendingStatus(LendingStatus.RETURNED);
         return bookCheckout;
 
@@ -64,5 +66,15 @@ public class BookingServiceImpl implements BookingService {
     @Override
     public Member getMember(BookItem bookItem) {
         return null;
+    }
+
+    @Override
+    public BookReservation getReservationByBookItem(BookItem bookItem) {
+        return bookingData.getReservationByBookItem(bookItem);
+    }
+
+    @Override
+    public BookCheckout getCheckoutByBookItem(BookItem bookItem) {
+        return bookingData.getBookCheckoutByBookItem(bookItem);
     }
 }

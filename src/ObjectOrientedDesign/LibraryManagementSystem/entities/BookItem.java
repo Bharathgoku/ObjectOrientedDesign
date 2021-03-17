@@ -18,4 +18,9 @@ public class BookItem extends Book {
     public BookItemStatus getBookItemStatus() {
         return bookItemStatus;
     }
+
+    public void setBookItemStatus(
+        BookItemStatus bookItemStatus) {
+        this.bookItemStatus = bookItemStatus;
+    }
 }

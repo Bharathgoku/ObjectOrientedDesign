@@ -38,5 +38,7 @@ public class BookCheckout {
         this.bookItem = bookItem;
     }
 
-
+    public void setDueDate(LocalDateTime dueDate) {
+        this.dueDate = dueDate;
+    }
 }

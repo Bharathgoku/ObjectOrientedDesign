@@ -23,4 +23,8 @@ public interface BookingService {
 
     Member getMember(BookItem bookItem);
 
+    BookReservation getReservationByBookItem(BookItem bookItem);
+
+    BookCheckout getCheckoutByBookItem(BookItem bookItem);
+
 }

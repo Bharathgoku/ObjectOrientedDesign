@@ -39,4 +39,8 @@ public class BookReservation {
         ReservationStatus reservationStatus) {
         this.reservationStatus = reservationStatus;
     }
+
+    public Member getMember() {
+        return member;
+    }
 }

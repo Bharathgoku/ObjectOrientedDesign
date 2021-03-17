@@ -1,7 +1,9 @@
 package ObjectOrientedDesign.LibraryManagementSystem;
 
 import ObjectOrientedDesign.LibraryManagementSystem.entities.Book;
+import ObjectOrientedDesign.LibraryManagementSystem.entities.BookCheckout;
 import ObjectOrientedDesign.LibraryManagementSystem.entities.BookItem;
+import ObjectOrientedDesign.LibraryManagementSystem.entities.BookReservation;
 import ObjectOrientedDesign.LibraryManagementSystem.entities.Member;
 import ObjectOrientedDesign.LibraryManagementSystem.enums.Category;
 import ObjectOrientedDesign.LibraryManagementSystem.services.interfaces.BookingService;
@@ -56,15 +58,14 @@ public class LibrarySystem implements LibrarianSystem, MemberSystem{
         return member;
     }
 
-    // checkout flow
+
     @Override
-    public BookItem checkoutBookItem(BookItem bookItem) {
+    public BookCheckout checkoutBookItem(BookItem bookItem, Member member) {
         return null;
     }
 
-    // reserve book flow
     @Override
-    public Book reserveABook(Book book) {
+    public BookReservation reserveABookItem(BookItem bookItem, Member member) {
         return null;
     }
 
@@ -73,11 +74,11 @@ public class LibrarySystem implements LibrarianSystem, MemberSystem{
     public void returnBookItem(BookItem bookItem){
     }
 
-    // renew book flow
     @Override
-    public BookItem renewBookItem(BookItem bookItem) {
+    public BookCheckout renewBookItem(BookItem bookItem, Member member) {
         return null;
     }
+
 
     @Override
     public List<Book> searchByTitle(String titleName) {

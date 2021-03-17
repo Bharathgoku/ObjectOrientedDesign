@@ -17,4 +17,8 @@ public class Fine {
     public void setFineStatus(FineStatus fineStatus) {
         this.fineStatus = fineStatus;
     }
+
+    public FineStatus getFineStatus() {
+        return fineStatus;
+    }
 }
