@@ -1,0 +1,11 @@
+UseCases/Requirement:
+1. search the flight based on location and dates.
+2. Book a flight based on vacancy and allocate the seat to customer.
+3. Make a payment
+4. Get the ticket
+
+
+Actors:
+
+Customer,
+Reservation system itself.
