@@ -15,6 +15,8 @@ import java.util.List;
 
 public class LibrarySystem implements LibrarianSystem, MemberSystem{
 
+    // this is other type of implementation
+
     private InventoryService inventoryService;
     private MemberService memberService;
     private BookingService bookingService;

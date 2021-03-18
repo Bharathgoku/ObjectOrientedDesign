@@ -1,10 +1,11 @@
 package ObjectOrientedDesign.MovieTicketBookingSystem.entities;
 
-public class Theatre {
+public class Account {
 
-    private Integer theatreId;
+    private Integer accountId;
     private String name;
+    private String email;
+    private String password;
     private String address;
-    private City city;
 
 }

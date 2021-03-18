@@ -1,8 +1,8 @@
 package ObjectOrientedDesign.MovieTicketBookingSystem.entities;
 
-public class Customer {
+public class Admin {
 
-    private Integer customerId;
+    private Integer adminId;
     private Account account;
 
 }
