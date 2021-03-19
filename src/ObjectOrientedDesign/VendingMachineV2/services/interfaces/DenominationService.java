@@ -1,11 +1,16 @@
 package ObjectOrientedDesign.VendingMachineV2.services.interfaces;
 
-import ObjectOrientedDesign.VendingMachineV2.Denomination;
+import ObjectOrientedDesign.VendingMachineV2.enums.Denomination;
+import java.util.List;
 
 public interface DenominationService {
 
-    void addDenomination(Denomination denomination, Integer count);
-
     Integer getCount(Denomination denomination);
+
+    Integer calculateInsertedAmount(List<Denomination> insertedAmount);
+
+    void addDenomination(List<Denomination> insertedAmount);
+
+    List<Denomination> refundAmount(Integer amount);
 
 }

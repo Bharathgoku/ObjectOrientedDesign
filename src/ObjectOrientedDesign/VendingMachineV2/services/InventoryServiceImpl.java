@@ -35,4 +35,8 @@ public class InventoryServiceImpl implements InventoryService {
 
         inventoryData.getMap().put(productName, inventoryData.getMap().get(productName)-1);
     }
+
+    public boolean isOutOfItems(){
+        return false;
+    }
 }

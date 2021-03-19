@@ -1,6 +1,6 @@
 package ObjectOrientedDesign.VendingMachineV2.services.interfaces;
 
-import ObjectOrientedDesign.VendingMachineV2.Denomination;
+import ObjectOrientedDesign.VendingMachineV2.enums.Denomination;
 import java.util.List;
 
 public interface PaymentService {

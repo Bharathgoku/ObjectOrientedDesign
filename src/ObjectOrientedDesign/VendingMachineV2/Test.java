@@ -1,32 +1,39 @@
 package ObjectOrientedDesign.VendingMachineV2;
 
+import ObjectOrientedDesign.CacheSystem.Admin;
 import ObjectOrientedDesign.VendingMachineV2.DataStore.DenominationData;
 import ObjectOrientedDesign.VendingMachineV2.DataStore.InventoryData;
 import ObjectOrientedDesign.VendingMachineV2.DataStore.PricingData;
+import ObjectOrientedDesign.VendingMachineV2.enums.Denomination;
 import ObjectOrientedDesign.VendingMachineV2.services.InventoryServiceImpl;
 import ObjectOrientedDesign.VendingMachineV2.services.interfaces.DenominationService;
 import ObjectOrientedDesign.VendingMachineV2.services.DenominationServiceImpl;
-import ObjectOrientedDesign.VendingMachineV2.services.PaymentServiceImpl;
 import ObjectOrientedDesign.VendingMachineV2.services.PricingServiceImpl;
 import ObjectOrientedDesign.VendingMachineV2.services.interfaces.PaymentService;
-import java.util.Arrays;
+import ObjectOrientedDesign.VendingMachineV2.states.AmountInsertedState;
+import ObjectOrientedDesign.VendingMachineV2.states.IdleState;
+import ObjectOrientedDesign.VendingMachineV2.states.ItemSoldState;
+import ObjectOrientedDesign.VendingMachineV2.states.ProductSelectedState;
+import ObjectOrientedDesign.VendingMachineV2.states.SoldOutState;
+import ObjectOrientedDesign.VendingMachineV2.states.VendingMachineState;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
 public class Test {
     public static void main(String[] args){
+        StateVendingMachine stateVendingMachine = initialize();
 
+        AdminVendingMachine adminVendingMachine = new AdminVendingMachineImpl(stateVendingMachine);
+        UserVendingMachine userVendingMachine = new UserVendingMachineImpl(stateVendingMachine);
     }
 
-    private static void initialize(){
+    private static StateVendingMachine  initialize(){
         DenominationData denominationData = new DenominationData(new HashMap<>());
         DenominationService denominationService = new DenominationServiceImpl(denominationData);
-        denominationService.addDenomination(Denomination.PENNY, 100);
-        denominationService.addDenomination(Denomination.NICKEL, 100);
-        denominationService.addDenomination(Denomination.DIME, 100);
-        denominationService.addDenomination(Denomination.QUARTER, 100);
+        List<Denomination> denominationList = new ArrayList<>(){};
+        denominationService.addDenomination(denominationList);
 
-        PaymentService paymentService = new PaymentServiceImpl(denominationService);
         InventoryData inventoryData = new InventoryData(new HashMap<>());
         InventoryServiceImpl inventoryService = new InventoryServiceImpl(inventoryData);
 
@@ -42,21 +49,9 @@ public class Test {
         pricingService.addPrice("Pepsi", 35);
         pricingService.addPrice("Soda", 45);
 
-        VendingMachineSystem vendingMachineSystem = new VendingMachineSystem(inventoryService, paymentService,
-            pricingService);
+        StateVendingMachine stateVendingMachine = new StateVendingMachine(pricingService, denominationService, inventoryService);
 
-
-        Integer price = vendingMachineSystem.getPrice("Coke");
-
-        List<Denomination> denominationList = Arrays.asList(Denomination.DIME, Denomination.DIME, Denomination.DIME);
-
-        vendingMachineSystem.insertAmountAndSelectItem(denominationList, "Coke");
-
-        AdminVendingMachine adminVendingMachine = vendingMachineSystem;
-
-        UserVendingMachine userVendingMachine = vendingMachineSystem;
-
-
+        return stateVendingMachine;
 
     }
 }

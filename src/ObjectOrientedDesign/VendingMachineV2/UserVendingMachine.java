@@ -1,13 +1,15 @@
 package ObjectOrientedDesign.VendingMachineV2;
 
+import ObjectOrientedDesign.VendingMachineV2.enums.Denomination;
 import java.util.List;
 
 public interface UserVendingMachine {
 
-    int getPrice(String productName);
+    Integer getPrice(String productName);
 
-    void insertAmountAndSelectItem(List<Denomination> insertedAmount, String productName);
+    Integer insertAmount(List<Denomination> insertedAmount);
 
-    void addDenominations(List<Denomination> denominations);
+    void selectItem(String itemName);
+
 
 }

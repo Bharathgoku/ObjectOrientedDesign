@@ -1,6 +1,6 @@
 package ObjectOrientedDesign.VendingMachineV2.DataStore;
 
-import ObjectOrientedDesign.VendingMachineV2.Denomination;
+import ObjectOrientedDesign.VendingMachineV2.enums.Denomination;
 import java.util.Map;
 
 public class DenominationData {

@@ -1,4 +1,4 @@
-package ObjectOrientedDesign.VendingMachineV2;
+package ObjectOrientedDesign.VendingMachineV2.enums;
 
 public enum Denomination {
     PENNY(1), NICKEL(5), DIME(10), QUARTER(25);

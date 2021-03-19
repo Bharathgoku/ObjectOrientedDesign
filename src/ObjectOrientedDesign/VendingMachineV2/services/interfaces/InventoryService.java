@@ -8,5 +8,7 @@ public interface InventoryService {
 
     void getItem(String productName);
 
+    boolean isOutOfItems();
+
 
 }
