@@ -1,9 +1,7 @@
 package ObjectOrientedDesign.CacheSystem;
 
 import ObjectOrientedDesign.FlightReservationSystem.Person;
-import ObjectOrientedDesign.Splitwise.User;
 import java.util.List;
-import java.util.Map;
 
 public class CacheSystem implements UserCacheSystem, AdminCacheSystem{
 

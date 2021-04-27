@@ -17,7 +17,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 
-public class MemberSystemImpl  implements MemberSystem{
+public class MemberSystemImpl implements MemberSystem{
 
     private BookingService bookingService;
     private FineService fineService;

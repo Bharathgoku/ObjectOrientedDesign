@@ -1,0 +1,27 @@
+We will focus on the following set of requirements while designing Facebook:
+
+  Each member should be able to add information about their basic profile, work experience, education, etc.
+
+  Any user of our system should be able to search other members, groups or pages by their name.
+
+  Members should be able to send and accept/reject friend requests from other members.
+
+  Members should be able to follow other members without becoming their friend.
+
+  Members should be able to create groups and pages, as well as join already created groups, and follow pages.
+
+  Members should be able to create new posts to share with their friends.
+
+  Members should be able to add comments to posts, as well as like or share a post or comment.
+
+  Members should be able to create privacy lists containing their friends. Members can link any post with a privacy list to make the post visible only to the members of that list.
+
+  Any member should be able to send messages to other members.
+
+  Any member should be able to add a recommendation for any page. (??)
+
+  The system should send a notification to a member whenever there is a new message or friend request or comment on their post.
+
+  Members should be able to search through posts for a word.(??)
+
+Extended Requirement: Write a function to find a connection suggestion for a member.
