@@ -2,25 +2,25 @@ package ObjectOrientedDesign.SnakesAndLadder;
 
 public class Player {
 
+    private String name;
 
-  static int inc = 0;
+    private int cellNum = 0;
 
-  Integer id;
+    Player(String name){
+        this.name = name;
+    }
 
-  String name;
+    public String getName() {
+        return name;
+    }
 
-  int cellNum = 0;
+    public int getCellNum() {
+        return cellNum;
+    }
 
-  Player(String name){
-    this.name = name;
-    this.id = inc++;
-  }
-
-  public boolean isWinner(){
-    if(cellNum == 100)
-      return true;
-    return false;
-  }
+    public void setCellNum(int cellNum) {
+        this.cellNum = cellNum;
+    }
 
 
 }

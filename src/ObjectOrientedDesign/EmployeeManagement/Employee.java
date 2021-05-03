@@ -34,7 +34,7 @@ public class Employee {
   }
 
   public List<Employee> getSubordinates(){
-    return (List<Employee>) this.subordinates.clone();
+    return (List<Employee>) this.subordinates;
   }
 
 }

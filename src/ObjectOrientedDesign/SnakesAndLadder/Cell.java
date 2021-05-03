@@ -2,12 +2,30 @@ package ObjectOrientedDesign.SnakesAndLadder;
 
 public class Cell {
 
-  int number;
+  private int number;
+  private boolean hasSnake;
 
-  boolean hasSnake;
+  private boolean hasLadder;
 
-  boolean hasLadder;
+  private Cell nextCell;
 
-  Cell nextCell;
+  public Cell(int number) {
+    this.number = number;
+  }
 
+  public int getNumber() {
+    return number;
+  }
+
+  public boolean hasSnake() {
+    return hasSnake;
+  }
+
+  public boolean hasLadder() {
+    return hasLadder;
+  }
+
+  public Cell getNextCell() {
+    return nextCell;
+  }
 }

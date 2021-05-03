@@ -1,17 +1,25 @@
 package ObjectOrientedDesign.SnakesAndLadder;
 
+import java.util.List;
 import java.util.Map;
 
 public class Board {
 
-  Map<Integer, Cell> cellMap;
+  private int boardSize = 10;
+  private Cell[][] cells;
 
-  Board(Map<Integer, Cell> cellMap){
-    this.cellMap = cellMap;
+  public Board() {
+    // initialise board and cells
   }
 
-  public Cell getCell(Integer num){
-    return cellMap.get(num);
+  public Cell getCell(int num){
+
+    // get cell from num;
+
+    return new Cell(num);
   }
 
+  public int getBoardSize() {
+    return boardSize;
+  }
 }
