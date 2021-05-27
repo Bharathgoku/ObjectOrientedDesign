@@ -47,7 +47,7 @@ public class Lane implements Observable {
     @Override
     public void notifyObservers() {
         for(Observer o : observerList){
-            o.update(game);
+            o.update();
         }
 
     }

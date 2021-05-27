@@ -1,5 +1,8 @@
 package ObjectOrientedDesign.ChessGame;
 
+import ObjectOrientedDesign.ChessGame.enums.Type;
+import ObjectOrientedDesign.ChessGame.pieces.Piece;
+
 public class Game {
 
     private Player[] players;

@@ -1,5 +1,6 @@
 package ObjectOrientedDesign.ChessGame;
 
+import ObjectOrientedDesign.ChessGame.enums.Type;
 import java.util.Scanner;
 
 public class Test {

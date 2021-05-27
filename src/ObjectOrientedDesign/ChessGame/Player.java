@@ -1,5 +1,7 @@
 package ObjectOrientedDesign.ChessGame;
 
+import ObjectOrientedDesign.ChessGame.enums.Type;
+
 public class Player {
 
     private String name;

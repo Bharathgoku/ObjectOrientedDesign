@@ -1,4 +1,6 @@
-package ObjectOrientedDesign.ChessGame;
+package ObjectOrientedDesign.ChessGame.pieces;
+
+import ObjectOrientedDesign.ChessGame.enums.Type;
 
 public abstract class Piece {
 

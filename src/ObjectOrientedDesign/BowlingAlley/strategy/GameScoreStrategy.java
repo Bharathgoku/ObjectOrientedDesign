@@ -6,4 +6,6 @@ public interface GameScoreStrategy {
 
     void updateScore(Player player, int score);
 
+    Integer getSetSize();
+
 }

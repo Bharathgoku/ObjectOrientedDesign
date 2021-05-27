@@ -1,6 +1,6 @@
-package ObjectOrientedDesign.ChessGame;
+package ObjectOrientedDesign.ChessGame.pieces;
 
-public class King extends Piece{
+public class Rook extends Piece {
 
     @Override
     public boolean canMove(int[] startPosition, int[] destPosition) {

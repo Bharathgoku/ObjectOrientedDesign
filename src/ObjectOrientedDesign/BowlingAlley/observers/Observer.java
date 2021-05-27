@@ -4,6 +4,6 @@ import ObjectOrientedDesign.BowlingAlley.entities.Game;
 
 public interface Observer {
 
-    void update(Game game);
+    void update();
 
 }

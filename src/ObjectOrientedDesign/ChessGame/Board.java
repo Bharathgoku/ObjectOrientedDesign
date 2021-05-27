@@ -1,5 +1,7 @@
 package ObjectOrientedDesign.ChessGame;
 
+import ObjectOrientedDesign.ChessGame.pieces.Piece;
+
 public class Board {
 
     private Piece[][] cells;

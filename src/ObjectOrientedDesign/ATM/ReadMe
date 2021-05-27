@@ -1,0 +1,18 @@
+The main components of the ATM that will affect interactions between the ATM and its users are:
+Card reader: to read the users’ ATM cards.
+Keypad: to enter information into the ATM e.g. PIN. cards.
+Screen: to display messages to the users.
+Cash dispenser: for dispensing cash.
+Deposit slot: For users to deposit cash or checks.
+Printer: for printing receipts.
+Communication/Network Infrastructure: it is assumed that the ATM has a communication infrastructure to communicate with the bank upon any transaction or activity.
+The user can have two types of accounts: 1) Checking, and 2) Savings, and should be able to perform the following five transactions on the ATM:
+
+Balance inquiry: To see the amount of funds in each account.
+Deposit cash: To deposit cash.
+Deposit check: To deposit checks.
+Withdraw cash To withdraw money from their checking account.
+Transfer funds: To transfer funds to another account.
+
+There is user, operator and bank manager
+denominations allowed : 50, 100, 200, 500, 2000
